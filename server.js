@@ -20,7 +20,7 @@ var midleWare = {
 
 app.use(midleWare.logger);
 app.get('/about', midleWare.logger, function(req,res) {
-	res.send('About Us');
+	res.send('About-Us');
 });
 
 app.use(express.static(__dirname + '/public'));
