@@ -2,17 +2,9 @@ var express = require('express');
 var app = express();
 var PORT = 3000;
 
-var midleWare = {
-	requriedAuthentication: function(req,res,next){
-		console.log('private route info!');
-		next();
-	},
-	logger: function(req,res,next) {
-		// console.log(req);
-		console.log(req.method+ ' ' +req.originalUrl + '  DATE: '+ new Date().toString());
-		next();
-	}
-}
+var midleWare = require('./midleware.js');
+
+
 
 // app.get('/',function(req,res){
 // 	res.send('Hello Express!');
